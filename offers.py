@@ -37,7 +37,7 @@ def filter_offers(input_date, input_data):
             final_offers.append(offer)
             categories.add(offer["category"])
 
-    return final_offers
+    return {"offers": final_offers}
 
 # save the filtered offers to a file output.json (stored at the root of the project)
 output_data = json.dumps(filter_offers(input_date,input_data), indent=1)
